@@ -1,13 +1,14 @@
 html {
     background: #d900ff;
     background: linear-gradient(90deg, rgba(217, 0, 255, 1) 0%, rgba(255, 215, 128, 1) 63%);
-    overflow: hidden;
-
+    overflow-x: hidden;
+    padding: 0;
 }
 
 .tituloInicio {
     font-family: "Montserrat", sans-serif;
     text-align: center;
+    height: 100vh;
     font-size: 10vw;
     margin-top: 10%;
     padding: 0;
@@ -62,6 +63,43 @@ html {
     rotate: -40deg;
     left: inherit;
 }
+
+.contenedor {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    margin: 0;
+}
+.interior {
+    padding: 2vw;
+}
+.titulobody {
+    font-family: "Poppins", sans-serif;
+    font-size: 13vw;
+    font-weight: 800;
+    letter-spacing: -10px;
+    line-height: 70%;
+    font-synthesis: none;
+    margin: 0vh
+}
+.chico {
+    font-size: 10vw;
+}
+.imgFresas{
+    position: absolute;
+    width: 35vw;
+    right: -5vw;
+    top: -15vh;
+}
+.fresas {
+    color: red;
+}
+.espacio {
+    height: 10vh;
+}
+
 
 @font-face {
     font-family: "Montserrat";
