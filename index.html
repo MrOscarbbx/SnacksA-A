@@ -22,24 +22,26 @@
     <div class="contenedor-barra">
         <div class="imagen-espacios izquierda"></div>
         <div class="contenedor-contenido">
-            <h2 class="titulo-barra"> Barra de Elotes</h2>
+            <h2 class="titulo-barra">🌽 Barra de Elotes</h2>
             <p class="descripcion">Incluye elote preparado con base de botana y toppings.</p>
             
-            <div class="seccion">
-                <h3>Base (elige 1)</h3>
-                <ul>
-                    <li>Tostitos verdes</li>
-                    <li>Tostitos morados</li>
-                    <li>Doritos</li>
-                </ul>
+            <div class="seccion" data-barra="elotes">
+                <h3>🌶️ Base (elige 1)</h3>
+                <div class="opciones-grupo" data-categoria="Base" data-limite="1">
+                    <button class="opcion-btn" data-valor="Tostitos verdes">Tostitos verdes</button>
+                    <button class="opcion-btn" data-valor="Tostitos morados">Tostitos morados</button>
+                    <button class="opcion-btn" data-valor="Doritos">Doritos</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
             
-            <div class="seccion">
-                <h3>Complementos</h3>
-                <ul>
-                    <li>Queso fresco</li>
-                    <li>Queso amarillo</li>
-                </ul>
+            <div class="seccion" data-barra="elotes">
+                <h3>🧀 Complementos</h3>
+                <div class="opciones-grupo" data-categoria="Complementos" data-limite="999">
+                    <button class="opcion-btn" data-valor="Queso fresco">Queso fresco</button>
+                    <button class="opcion-btn" data-valor="Queso amarillo">Queso amarillo</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
         </div>
         <div class="imagen-espacios derecha"></div>
@@ -49,57 +51,62 @@
     <div class="contenedor-barra">
         <div class="imagen-espacios izquierda"></div>
         <div class="contenedor-contenido">
-            <h2 class="titulo-barra">Barra de Vasos de Fruta</h2>
+            <h2 class="titulo-barra">🍉 Barra de Vasos de Fruta</h2>
             <p class="descripcion">Vasos frescos con fruta, toppings y botanas.</p>
             
-            <div class="seccion">
-                <h3>Fruta base (elige 2)</h3>
-                <ul>
-                    <li>Zanahoria</li>
-                    <li>Jícama</li>
-                    <li>Pepino</li>
-                </ul>
+            <div class="seccion" data-barra="fruta">
+                <h3>🥕 Fruta base (elige 2)</h3>
+                <div class="opciones-grupo" data-categoria="Fruta base" data-limite="2">
+                    <button class="opcion-btn" data-valor="Zanahoria">Zanahoria</button>
+                    <button class="opcion-btn" data-valor="Jícama">Jícama</button>
+                    <button class="opcion-btn" data-valor="Pepino">Pepino</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
             
-            <div class="seccion">
-                <h3> Cacahuate (elige 1)</h3>
-                <ul>
-                    <li>Natural</li>
-                    <li>Con queso</li>
-                    <li>Garapiñado</li>
-                    <li>Con chile</li>
-                </ul>
+            <div class="seccion" data-barra="fruta">
+                <h3>🥜 Cacahuate (elige 1)</h3>
+                <div class="opciones-grupo" data-categoria="Cacahuate" data-limite="1">
+                    <button class="opcion-btn" data-valor="Natural">Natural</button>
+                    <button class="opcion-btn" data-valor="Con queso">Con queso</button>
+                    <button class="opcion-btn" data-valor="Garapiñado">Garapiñado</button>
+                    <button class="opcion-btn" data-valor="Con chile">Con chile</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
             
-            <div class="seccion">
-                <h3> Dulces y gomitas (elige 3)</h3>
-                <ul>
-                    <li>Gomitas de lombriz</li>
-                    <li>Frutitas</li>
-                    <li>Aros de manzana</li>
-                    <li>Aros de durazno</li>
-                    <li>Fresón</li>
-                    <li>Skwinkles</li>
-                    <li>Manguito enchilado</li>
-                    <li>Panditas</li>
-                </ul>
+            <div class="seccion" data-barra="fruta">
+                <h3>🍬 Dulces y gomitas (elige 3)</h3>
+                <div class="opciones-grupo" data-categoria="Dulces y gomitas" data-limite="3">
+                    <button class="opcion-btn" data-valor="Gomitas de lombriz">Gomitas de lombriz</button>
+                    <button class="opcion-btn" data-valor="Frutitas">Frutitas</button>
+                    <button class="opcion-btn" data-valor="Aros de manzana">Aros de manzana</button>
+                    <button class="opcion-btn" data-valor="Aros de durazno">Aros de durazno</button>
+                    <button class="opcion-btn" data-valor="Fresón">Fresón</button>
+                    <button class="opcion-btn" data-valor="Skwinkles">Skwinkles</button>
+                    <button class="opcion-btn" data-valor="Manguito enchilado">Manguito enchilado</button>
+                    <button class="opcion-btn" data-valor="Panditas">Panditas</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
             
-            <div class="seccion">
-                <h3> Botana (elige 1)</h3>
-                <ul>
-                    <li>Doritos</li>
-                    <li>Patitas naturales</li>
-                    <li>Patitas adobadas</li>
-                </ul>
+            <div class="seccion" data-barra="fruta">
+                <h3>🌽 Botana (elige 1)</h3>
+                <div class="opciones-grupo" data-categoria="Botana" data-limite="1">
+                    <button class="opcion-btn" data-valor="Doritos">Doritos</button>
+                    <button class="opcion-btn" data-valor="Patitas naturales">Patitas naturales</button>
+                    <button class="opcion-btn" data-valor="Patitas adobadas">Patitas adobadas</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
             
-            <div class="seccion">
-                <h3> Extras opcionales</h3>
-                <ul>
-                    <li>Queso fresco</li>
-                    <li>Queso amarillo</li>
-                </ul>
+            <div class="seccion" data-barra="fruta">
+                <h3>🧀 Extras opcionales</h3>
+                <div class="opciones-grupo" data-categoria="Extras opcionales" data-limite="999">
+                    <button class="opcion-btn" data-valor="Queso fresco">Queso fresco</button>
+                    <button class="opcion-btn" data-valor="Queso amarillo">Queso amarillo</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
         </div>
         <div class="imagen-espacios derecha"></div>
@@ -109,52 +116,69 @@
     <div class="contenedor-barra">
         <div class="imagen-espacios izquierda"></div>
         <div class="contenedor-contenido">
-            <h2 class="titulo-barra"> Barra de Mini Hot Cakes</h2>
+            <h2 class="titulo-barra">🥞 Barra de Mini Hot Cakes</h2>
             <p class="descripcion">Hot cakes en versión mini con toppings personalizados.</p>
             
-            <div class="seccion">
-                <h3> Presentación</h3>
-                <ul>
-                    <li>12 mini hot cakes</li>
-                    <li>20 mini hot cakes</li>
-                </ul>
+            <div class="seccion" data-barra="hotcakes">
+                <h3>📦 Presentación</h3>
+                <div class="opciones-grupo" data-categoria="Presentación" data-limite="1">
+                    <button class="opcion-btn" data-valor="12 mini hot cakes">12 mini hot cakes</button>
+                    <button class="opcion-btn" data-valor="20 mini hot cakes">20 mini hot cakes</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
             
-            <div class="seccion">
-                <h3> Salsas (elige 2)</h3>
-                <ul>
-                    <li>Nutella</li>
-                    <li>Lechera</li>
-                    <li>Crema de maní</li>
-                    <li>Miel de maple</li>
-                    <li>Mermelada</li>
-                </ul>
+            <div class="seccion" data-barra="hotcakes">
+                <h3>🍯 Salsas (elige 2)</h3>
+                <div class="opciones-grupo" data-categoria="Salsas" data-limite="2">
+                    <button class="opcion-btn" data-valor="Nutella">Nutella</button>
+                    <button class="opcion-btn" data-valor="Lechera">Lechera</button>
+                    <button class="opcion-btn" data-valor="Crema de maní">Crema de maní</button>
+                    <button class="opcion-btn" data-valor="Miel de maple">Miel de maple</button>
+                    <button class="opcion-btn" data-valor="Mermelada">Mermelada</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
             
-            <div class="seccion">
-                <h3> Fruta (elige 4)</h3>
-                <ul>
-                    <li>Uva</li>
-                    <li>Fresa</li>
-                    <li>Plátano</li>
-                    <li>Manzana</li>
-                    <li>Guayaba</li>
-                    <li>Blueberry</li>
-                    <li>Mora roja</li>
-                </ul>
+            <div class="seccion" data-barra="hotcakes">
+                <h3>🍓 Fruta (elige 4)</h3>
+                <div class="opciones-grupo" data-categoria="Fruta" data-limite="4">
+                    <button class="opcion-btn" data-valor="Uva">Uva</button>
+                    <button class="opcion-btn" data-valor="Fresa">Fresa</button>
+                    <button class="opcion-btn" data-valor="Plátano">Plátano</button>
+                    <button class="opcion-btn" data-valor="Manzana">Manzana</button>
+                    <button class="opcion-btn" data-valor="Guayaba">Guayaba</button>
+                    <button class="opcion-btn" data-valor="Blueberry">Blueberry</button>
+                    <button class="opcion-btn" data-valor="Mora roja">Mora roja</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
             
-            <div class="seccion">
-                <h3> Toppings</h3>
-                <ul>
-                    <li>Lunetas</li>
-                    <li>Galleta Oreo</li>
-                    <li>Almendras</li>
-                    <li>Chocolate Kinder</li>
-                </ul>
+            <div class="seccion" data-barra="hotcakes">
+                <h3>🍫 Toppings</h3>
+                <div class="opciones-grupo" data-categoria="Toppings" data-limite="999">
+                    <button class="opcion-btn" data-valor="Lunetas">Lunetas</button>
+                    <button class="opcion-btn" data-valor="Galleta Oreo">Galleta Oreo</button>
+                    <button class="opcion-btn" data-valor="Almendras">Almendras</button>
+                    <button class="opcion-btn" data-valor="Chocolate Kinder">Chocolate Kinder</button>
+                </div>
+                <div class="contador-seleccion"></div>
             </div>
         </div>
         <div class="imagen-espacios derecha"></div>
+    </div>
+
+    <!-- Resumen de Orden -->
+    <div class="resumen-orden-container">
+        <div class="resumen-orden">
+            <h3>📋 Resumen de tu Orden</h3>
+            <div class="orden-contenido">
+                <p id="orden-vacia">Selecciona tus opciones para ver tu orden aquí</p>
+                <div id="orden-items"></div>
+            </div>
+            <button id="copiar-orden" class="btn-copiar" style="display:none;">📋 Copiar Orden</button>
+            <div id="mensaje-copiado" class="mensaje-copiado" style="display:none;">✓ ¡Copiado!</div>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
