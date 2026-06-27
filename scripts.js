@@ -8,6 +8,15 @@ const orden = {
 // Inicializar la app
 document.addEventListener('DOMContentLoaded', () => {
     inicializarBotones();
+    const btnVerOrden = document.getElementById('ver-orden-btn');
+    if (btnVerOrden) {
+        btnVerOrden.addEventListener('click', () => {
+            const copiaOrden = document.getElementById('copiar-orden');
+            if (copiaOrden) {
+                copiaOrden.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    }
 });
 
 // Inicializar listeners para todos los botones
@@ -113,12 +122,20 @@ function actualizarResumenOrden() {
     }
     
     // Mostrar/ocultar elementos
+    const btnVerOrden = document.getElementById('ver-orden-btn');
+
     if (haySelecciones) {
         ordenVacia.style.display = 'none';
         btnCopiar.style.display = 'block';
+        if (btnVerOrden) {
+            btnVerOrden.style.display = 'block';
+        }
     } else {
         ordenVacia.style.display = 'block';
         btnCopiar.style.display = 'none';
+        if (btnVerOrden) {
+            btnVerOrden.style.display = 'none';
+        }
     }
     
     // Listener para copiar (agregarlo cada vez para evitar duplicados)

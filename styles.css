@@ -91,18 +91,27 @@ body {
 .contenedor-barra {
     position: relative;
     width: 90%;
-    border-radius: 15px;
+    border-radius: 30px;
     margin: 2rem auto;
     display: flex;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(12px);
     padding: 1rem;
     align-self: center;
     min-height: auto;
 }
-
+.barra-elotes {
+    color: #ffbf00;
+}
+.barra-fruta {
+    color: #ff0000;
+}
+.barra-hotcakes {
+    color: #b67b42;
+}
 .imagen-espacios {
     width: 200px;
     border-radius: 10px;
@@ -113,41 +122,45 @@ body {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.9rem;
 }
-
 .contenedor-contenido {
     flex: 1;
     display: flex;
     flex-direction: column;
-    color: white;
+    align-items: center;
+    text-align: center;
+    color: inherit;
 }
-
 .titulo-barra {
-    font-size: 5rem;
-    margin: 0;
+    font-size: 8rem;
+    letter-spacing: -0.05em;
+    margin: 2rem 0 0.5rem 0;
     font-weight: 700;
-    color: white;
+    color: inherit;
+    line-height: 6rem;
+    spacing: -0.05em;
 }
-
 .descripcion {
     font-size: 1.2rem;
+    color: inherit;
     margin: 0.5rem 0 1rem 0;
     opacity: 0.95;
 }
-
 .seccion {
-    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    align-items: center;
 }
-
 .seccion h3 {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     margin: 0 0 0.5rem 0;
     font-weight: 600;
-    color: #fff;
+    color: inherit;
 }
-
 .seccion ul {
     list-style: none;
     padding-left: 1.5rem;
+    color: inherit;
     margin: 0;
 }
 
@@ -155,14 +168,14 @@ body {
 .opciones-grupo {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
     margin: 0;
 }
-
 .opcion-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.8);
+    color: inherit;
+    border: 2px solid currentColor;
     padding: .9rem 1.6rem;
     border-radius: 20px;
     font-size: 1.9rem;
@@ -171,20 +184,17 @@ body {
     font-weight: 500;
     white-space: nowrap;
 }
-
 .opcion-btn:hover {
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
 }
-
 .opcion-btn.activo {
     background: #ffd780;
     color: #333;
     border-color: #ffd780;
     font-weight: 700;
 }
-
 .contador-seleccion {
     font-size: 0.95rem;
     margin-top: 0.5rem;
@@ -199,7 +209,6 @@ body {
     margin: 3rem auto;
     align-self: center;
 }
-
 .resumen-orden {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -208,13 +217,11 @@ body {
     padding: 1.5rem;
     color: white;
 }
-
 .resumen-orden h3 {
     font-size: 1.5rem;
     margin: 0 0 1rem 0;
     text-align: center;
 }
-
 .orden-contenido {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -224,50 +231,42 @@ body {
     overflow-y: auto;
     margin-bottom: 1rem;
 }
-
 #orden-vacia {
     text-align: center;
     opacity: 0.7;
     margin: 0;
 }
-
 #orden-items {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
-
 .orden-barra {
     background: rgba(255, 215, 128, 0.15);
     border-left: 3px solid #ffd780;
     padding: 0.75rem;
     border-radius: 5px;
 }
-
 .orden-barra-titulo {
     font-weight: 700;
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     color: #ffd780;
 }
-
 .orden-categoria {
     font-size: 0.85rem;
     margin-bottom: 0.4rem;
     padding-left: 1rem;
 }
-
 .orden-categoria-nombre {
     font-weight: 600;
     color: white;
 }
-
 .orden-items-lista {
     padding-left: 2rem;
     font-size: 0.8rem;
     opacity: 0.9;
 }
-
 .btn-copiar {
     width: 100%;
     background: #ffd780;
@@ -280,16 +279,32 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .btn-copiar:hover {
     background: #ffe5a3;
     transform: scale(1.02);
 }
-
 .btn-copiar:active {
     transform: scale(0.98);
 }
-
+.btn-flotante {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background: #ffd780;
+    color: #333;
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    z-index: 1000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-flotante:hover {
+    transform: translateY(-2px);
+}
 .mensaje-copiado {
     text-align: center;
     color: #ffd780;
@@ -300,53 +315,30 @@ body {
 
 /*Imagenes especificas*/
 
-.tostitos{
-    height: 40vw;
+.tostitos1{ 
+    position: relative;
+    height: 26vw;
+    top: 5vh;
+    right: -2vw;
+}
+.tostitos2{
+    position: relative;
+    height: 30vw;
+}
+.hotcakes{
+    position: relative;
+    top: -50vh;
+    left: -5vw;
+    height: 30vw;
+}
+.hotcakes2{
+    position: relative;
+    top: -50vh;
+    left: 0vw;
+    height: 30vw;
 }
 .vaso {
     height: 40vh;
-}
-.elotes {
-    background-image: url(img/Elotes.webp);
-    background-repeat: repeat;
-    background-size: contain;
-    background-color: transparent;
-    pointer-events: none;
-}
-.frutas {
-    background-image: url(img/Frutas.webp);
-    background-repeat: repeat;
-    background-size: 25vw;
-    background-color: transparent;
-    pointer-events: none;
-}
-
-@media screen and (max-width: 768px) {
-    .opciones-grupo {
-        gap: 0.5rem;
-    }
-
-    .opcion-btn {
-        padding: .5rem 1.6rem;
-        font-size: 1.2rem;
-    }
-
-    .resumen-orden-container {
-        width: 95%;
-    }
-
-    .resumen-orden {
-        padding: 1rem;
-    }
-
-    .resumen-orden h3 {
-        font-size: 1.2rem;
-    }
-
-    .tostitos{
-        width: 100vw;
-        height: auto;
-    }
 }
 
 .seccion li {
@@ -446,12 +438,11 @@ body {
         height: 150px;
     }
 
-    .contenedor-contenido {
-        gap: 0.5rem;
-    }
-
     .titulo-barra {
-        font-size: 1.8rem;
+        font-size: 4.8rem;
+        line-height: 4rem;
+        spacing: -0.05em;
+        letter-spacing: -.3rem;
     }
 
     .descripcion {
@@ -479,4 +470,49 @@ body {
     .espacio {
         height: clamp(0.8rem, 3vh, 6vh);
     }
+    .tostitos1{
+        width: 40vh;
+        height: auto;
+    }
+    .tostitos2{
+        width: 30vh;
+        height: auto;
+        bottom: 5vh;
+    }
+
+    .opciones-grupo {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    .opcion-btn {
+        padding: .5rem 1.6rem;
+        font-size: 1.2rem;
+    }
+
+    .resumen-orden-container {
+        width: 95%;
+    }
+
+    .resumen-orden {
+        padding: .5rem;
+    }
+
+    .resumen-orden h3 {
+        font-size: 1.2rem;
+    }
+
+    .tostitos1 ,.tostitos2, .hotcakes, .hotcakes2, .vaso {
+        display: none;
+    }
+    .imagen-espacios {
+        display: none;
+    }
+    .barra-elotes::before {
+    background-image: url(img/Elotes.webp);
+    background-color: #ffcc00;
+    /* Mezcla la imagen y el fondo. Puedes probar con: multiply, screen, overlay */
+    background-blend-mode: multiply; 
+    filter: brightness(0.8) hue-rotate(10deg);
+}
 }
