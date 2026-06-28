@@ -106,17 +106,53 @@ body {
 .barra-elotes {
     color: #ffbf00;
 }
+.barra-elotes::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/Elotes.webp);
+    background-size: contain;
+    background-position: center;
+    border-radius: 30px;
+    z-index: -1;
+    opacity: 0.3;
+}
 .barra-elotes button {
     background: #ffbf00;
 }
 .barra-fruta {
     color: #ff0000;
 }
+.barra-fruta::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/Frutas.webp);
+    background-size: contain;
+    background-repeat: repeat;
+    z-index: -1;
+    border-radius: 30px;
+    opacity: 0.15;
+}
 .barra-fruta button {
     background: #ff0000;
 }
 .barra-hotcakes {
     color: #b67b42;
+}
+.barra-hotcakes::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/Hotcakes.webp);
+    background-size: contain;
+    z-index: -1;
+    background-repeat: repeat;
+    border-radius: 30px;
+    opacity: 0.3;
 }
 .barra-hotcakes button {
     background: #b67b42;
@@ -152,6 +188,12 @@ body {
 .descripcion {
     font-size: 1.2rem;
     color: inherit;
+    font-weight: 600;
+    text-shadow:
+    1px 1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff;
     margin: 0.5rem 0 1rem 0;
     opacity: 0.95;
 }
@@ -165,6 +207,11 @@ body {
     font-size: 2.4rem;
     margin: 0 0 0.5rem 0;
     font-weight: 600;
+    text-shadow:
+    1px 1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff;
     color: inherit;
 }
 .seccion ul {
@@ -350,22 +397,6 @@ body {
     height: 40vh;
 }
 
-.seccion li {
-    padding: 0.1rem 0;
-    font-size: 1.1rem;
-    position: relative;
-    padding-left: 1.5rem;
-    line-height: 1.3;
-}
-
-.seccion li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #ffd780;
-    font-weight: bold;
-}
-
 
 .contenedor {
     position: relative;
@@ -378,10 +409,6 @@ body {
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
-}
-
-.col {
-    flex-direction: column;
 }
 
 .tituloContenedor{
@@ -517,11 +544,4 @@ body {
     .imagen-espacios {
         display: none;
     }
-    .barra-elotes::before {
-    background-image: url(img/Elotes.webp);
-    background-color: #ffcc00;
-    /* Mezcla la imagen y el fondo. Puedes probar con: multiply, screen, overlay */
-    background-blend-mode: multiply; 
-    filter: brightness(0.8) hue-rotate(10deg);
-}
 }

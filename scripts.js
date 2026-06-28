@@ -12,8 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnVerOrden) {
         btnVerOrden.addEventListener('click', () => {
             const copiaOrden = document.getElementById('copiar-orden');
-            if (copiaOrden) {
-                copiaOrden.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const resumenOrden = document.querySelector('.resumen-orden-container');
+            const destino = copiaOrden && copiaOrden.offsetParent !== null ? copiaOrden : resumenOrden;
+
+            if (destino) {
+                destino.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (copiaOrden) {
+                    copiaOrden.focus({ preventScroll: true });
+                }
             }
         });
     }
